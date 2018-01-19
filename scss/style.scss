@@ -1,5 +1,6 @@
 @import "normalize";
 @import "layout";
+@import "slick";
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
 
 $bp-small: 480px;
@@ -8,10 +9,13 @@ $bp-large: 960px;
 $bp-xlarge: 1200px;
 
 $brand-color: #cc8593;
+$secondary-color: #4f4e4f;
+$text-color: #000;
 
 body{
 	font: 500 24px/1.3 'Raleway', sans-serif;
-	letter-spacing: 0.13em
+	letter-spacing: 0.13em;
+	color: $text-color;
 }
 
 
@@ -124,7 +128,7 @@ textarea {
 .ba-about {
 	background: $brand-color url(../img/purpl-bg.jpg) 50% no-repeat;
 	background-size: cover;
-	padding: 69px 0 80px;
+	padding: 70px 0 80px;
 	&__cont {
 		padding: 0 165px 0 125px;
 	}
@@ -182,4 +186,124 @@ textarea {
 // portfolio
 .ba-slide__body {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.ba-portfolio {
+	padding: 70px 0 40px;
+	background: #FFF;
+	&__cont {
+		padding: 0 165px 0 125px;
+	}
+	&__title {
+		letter-spacing: 0.1em;
+		font-size: 30px;
+		margin: 0 0 67px;
+		color: $brand-color;
+	}
+}
+.ba-work {
+	width: 47%;
+	&__link {
+		display: block;
+		position: relative;
+		&:hover .ba-work__overlay {
+			opacity: 0;
+			transition: opacity 1s;
+		}
+	}
+	&__overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		background-color: $brand-color;
+		opacity: 0.7;
+		transition: opacity 1s;
+	}
+	&__title {
+		margin: 5px 0 30px;
+		color: $secondary-color;
+	}
+}
+
+.ba-slider__buttons {
+	text-align: center;
+	svg {
+		fill: currentColor;
+	}
+	button {
+		border: none;
+		background: none;
+		color: $brand-color;
+		&:hover {
+			color: $text-color;
+		}
+
+	}
+}
+
+.ba-contact {
+	padding: 70px 0 220px;
+	background-color: #e2dcdc;
+	&__cont {
+		padding-left: 125px;
+	}
+	&__title {
+		letter-spacing: 0.1em;
+		font-size: 30px;
+		margin: 0 0 140px;
+		color: $secondary-color;
+	}
+	&__card {
+		max-width: 550px;
+		margin: 0 auto;
+		background: $brand-color;
+		text-align: center;
+		padding: 40px 0 20px;
+	}
+	&__write-me {
+		margin: 0 0 30px;
+		color: #FFF;
+	}
+	&__mail {
+		text-decoration: none;
+		color: $text-color;
+		display: block;
+		margin-bottom: 20px;
+		transition: all 0.5s ease-out;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}
+
+.ba-footer {
+	padding: 50px 0 75px;
+	background: $brand-color;
+	text-align: center;
+}
+.ba-social {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		display: inline-block;
+	}
+	li + li {
+		margin-left: 60px;
+	}
+	&__link {
+		color: #FFF;
+		&:hover {
+			color: $text-color;
+		}
+		svg {
+			fill: currentColor;
+		}
+	}
 }
