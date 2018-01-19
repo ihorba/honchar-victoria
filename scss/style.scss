@@ -240,8 +240,10 @@ textarea {
 		border: none;
 		background: none;
 		color: $brand-color;
+		outline: none;
 		&:hover {
 			color: $text-color;
+			outline: none;
 		}
 
 	}
