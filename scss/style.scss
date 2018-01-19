@@ -68,7 +68,6 @@ textarea {
 }
 
 .ba-intro {
-
 	min-height: 100vh;
 	background: #edeaf5;
 	position: relative;
@@ -82,7 +81,7 @@ textarea {
 		height: auto;
 		z-index: 0;
 		object-fit: contain;
-
+		transform: translate(-50%, -50%);
 	}
 	&__body {
 		position: relative;
@@ -113,11 +112,12 @@ textarea {
 }
 
 .ba-about {
-	&__cont {
-		padding: 69px 165px 125px 80px;
-	}
 	background: $brand-color url(../img/purpl-bg.jpg) 50% no-repeat;
 	background-size: cover;
+	padding: 69px 0 80px;
+	&__cont {
+		padding: 0 165px 0 125px;
+	}
 	&__title {
 		letter-spacing: 0.1em;
 		font-size: 30px;
@@ -127,8 +127,6 @@ textarea {
 	&__body {
 		background: #FFF;
 		position: relative;
-		align-items: stretch;
-
 		&:after {
 			content: " ";
 			position: absolute;
