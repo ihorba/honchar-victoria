@@ -68,9 +68,22 @@ textarea {
 }
 
 .ba-intro {
+
 	min-height: 100vh;
-	background: #edeaf5 url(../img/birdcatcher.jpg) 50% no-repeat;
-	background-size: cover;
+	background: #edeaf5;
+	position: relative;
+	&__video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: 0;
+		object-fit: contain;
+
+	}
 	&__body {
 		position: relative;
 		min-height: 100vh;

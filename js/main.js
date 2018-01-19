@@ -1,16 +1,26 @@
 ;(function($) {
 	"use strict";
+
+	$('.ba-menu__item').on('click', function(e){
+
+		$('.ba-menu__item').removeClass('active');
+		$(this).addClass('active');
+
+	});
+
+
 	$(document).ready(function() {
 
-		var presSlider = $('.ba-presentation-slider');
+		var presSlider = $('.ba-slider');
 		presSlider.slick({
-			slide: '.ba-presentation-slide',
+			slide: '.ba-slide',
 			arrows: true,
-			prevArrow: '.ba-presentation-slider-prev',
-			nextArrow: '.ba-presentation-slider-next',
-			slidesToShow: 2
+			prevArrow: '.ba-slider-prev',
+			nextArrow: '.ba-slider-next',
+			slidesToShow: 1
 		});
 	});
+
 
 })(jQuery);
 
