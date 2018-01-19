@@ -92,7 +92,7 @@ textarea {
 		width: auto;
 		height: auto;
 		z-index: 0;
-		object-fit: contain;
+		object-fit: cover;
 		transform: translate(-50%, -50%);
 	}
 	&__body {

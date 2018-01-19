@@ -851,8 +851,8 @@ select {
     width: auto;
     height: auto;
     z-index: 0;
-    -o-object-fit: contain;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
@@ -987,9 +987,11 @@ select {
   .ba-slider__buttons button {
     border: none;
     background: none;
-    color: #cc8593; }
+    color: #cc8593;
+    outline: none; }
     .ba-slider__buttons button:hover {
-      color: #000; }
+      color: #000;
+      outline: none; }
 
 .ba-contact {
   padding: 70px 0 220px;
