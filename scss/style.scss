@@ -68,9 +68,9 @@ textarea {
 }
 
 .ba-intro {
-	min-height: 100vh;
 	background: #edeaf5;
 	position: relative;
+	overflow: hidden;
 	&__video {
 		position: absolute;
 		top: 50%;

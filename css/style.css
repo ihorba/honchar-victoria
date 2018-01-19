@@ -762,9 +762,9 @@ select {
   transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in; }
 
 .ba-intro {
-  min-height: 100vh;
   background: #edeaf5;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .ba-intro__video {
     position: absolute;
     top: 50%;
