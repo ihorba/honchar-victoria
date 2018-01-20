@@ -11,6 +11,23 @@
 			nextArrow: '.ba-slider-next',
 			slidesToShow: 1
 		});
+
+		var worksSlider = $('.ba-inner-slider');
+		worksSlider.slick({
+			slide: '.ba-inner-slide',
+			arrows: true,
+			prevArrow: '.ba-inner-slider-prev',
+			nextArrow: '.ba-inner-slider-next',
+			slidesToShow: 3,
+			responsive: [
+			{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+			]
+		});
 	});
 
 	$('.ba-menu__item').on('click', function(e){

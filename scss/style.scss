@@ -242,12 +242,14 @@ textarea {
 		color: $brand-color;
 		outline: none;
 		&:hover {
-			color: $text-color;
+			color: $secondary-color;
 			outline: none;
 		}
 
 	}
 }
+
+// contact
 
 .ba-contact {
 	padding: 70px 0 220px;
@@ -284,6 +286,8 @@ textarea {
 	}
 }
 
+//footer
+
 .ba-footer {
 	padding: 50px 0 75px;
 	background: $brand-color;
@@ -297,15 +301,84 @@ textarea {
 		display: inline-block;
 	}
 	li + li {
-		margin-left: 60px;
+		margin-left: 30px;
 	}
 	&__link {
 		color: #FFF;
 		&:hover {
-			color: $text-color;
+			color: $secondary-color;
 		}
 		svg {
 			fill: currentColor;
 		}
+	}
+}
+
+
+//inner page
+
+.ba-inner-header {
+	padding: 50px 0;
+	background: $brand-color;
+	text-align: center;
+	&__logo {
+		color: #fff;
+		text-decoration: none;
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+	&__title {
+		font-size: 62px;
+		letter-spacing: 0.18em;
+		margin: 0;
+		line-height: 1;
+	}
+	&__subtitle {
+		font-size: 32px;
+		letter-spacing: 1em;
+		font-weight: 700;
+		margin: 0;
+		line-height: 1;
+	}
+}
+
+.ba-inner-section {
+	padding: 65px 0 40px;
+	background: #FFF;
+	text-align: center;
+	&__title {
+		color:  $secondary-color;
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		font-size: 18px;
+		color:  $secondary-color;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+
+}
+.ba-inner-slide {
+	margin-left: 20px;
+}
+
+.ba-inner-slider__buttons {
+	margin-top: 30px;
+	svg {
+		fill: currentColor;
+	}
+	button {
+		border: none;
+		background: none;
+		color: $brand-color;
+		outline: none;
+		&:hover {
+			color: $secondary-color;
+			outline: none;
+		}
+
 	}
 }

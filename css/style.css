@@ -990,7 +990,7 @@ select {
     color: #cc8593;
     outline: none; }
     .ba-slider__buttons button:hover {
-      color: #000;
+      color: #4f4e4f;
       outline: none; }
 
 .ba-contact {
@@ -1037,12 +1037,64 @@ select {
   .ba-social li {
     display: inline-block; }
   .ba-social li + li {
-    margin-left: 60px; }
+    margin-left: 30px; }
   .ba-social__link {
     color: #FFF; }
     .ba-social__link:hover {
-      color: #000; }
+      color: #4f4e4f; }
     .ba-social__link svg {
       fill: currentColor; }
+
+.ba-inner-header {
+  padding: 50px 0;
+  background: #cc8593;
+  text-align: center; }
+  .ba-inner-header__logo {
+    color: #fff;
+    text-decoration: none; }
+    .ba-inner-header__logo:hover {
+      color: #4f4e4f; }
+  .ba-inner-header__title {
+    font-size: 62px;
+    letter-spacing: 0.18em;
+    margin: 0;
+    line-height: 1; }
+  .ba-inner-header__subtitle {
+    font-size: 32px;
+    letter-spacing: 1em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1; }
+
+.ba-inner-section {
+  padding: 65px 0 40px;
+  background: #FFF;
+  text-align: center; }
+  .ba-inner-section__title {
+    color: #4f4e4f;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .ba-inner-section__subtitle {
+    font-size: 18px;
+    color: #4f4e4f;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+
+.ba-inner-slide {
+  margin-left: 20px; }
+
+.ba-inner-slider__buttons {
+  margin-top: 30px; }
+  .ba-inner-slider__buttons svg {
+    fill: currentColor; }
+  .ba-inner-slider__buttons button {
+    border: none;
+    background: none;
+    color: #cc8593;
+    outline: none; }
+    .ba-inner-slider__buttons button:hover {
+      color: #4f4e4f;
+      outline: none; }
 
 /*# sourceMappingURL=style.css.map */
