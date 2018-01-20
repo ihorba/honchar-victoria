@@ -257,7 +257,8 @@ textarea {
 
 .ba-contact {
 	padding: 70px 0 220px;
-	background-color: #e2dcdc;
+	background: #e2dcdc url(../img/contact.jpg) 50% no-repeat;
+	background-size: cover;
 	&__cont {
 		padding-left: 125px;
 	}
