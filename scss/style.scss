@@ -79,14 +79,14 @@ textarea {
 .ba-header {
 	position: absolute;
 	right: 20px;
+	transform: translateY(-50%);
 	&__container {
 		z-index: 10;
 		position: fixed;
 		max-width: 1170px;
 		padding-left: 15px;
 		padding-right: 15px;
-		top: 0;
-		bottom: 0;
+		top: 50%;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
@@ -98,7 +98,6 @@ textarea {
 		padding: 20px 0;
 	}
 	&__menu-list {
-		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -178,6 +177,14 @@ textarea {
 		position: absolute;
 		right: 20%;
 		top: 35%;
+		@media (max-width: $bp-large) {
+			right: 50%;
+			transform: translateX(50%)
+		}
+		@media (max-width: $bp-medium) {
+			right: 50%;
+			transform: translateX(50%)
+		}
 	}
 	&__title {
 		font-size: 72px;
@@ -185,6 +192,9 @@ textarea {
 		letter-spacing: 0.18em;
 		margin: 0;
 		line-height: 1;
+		@media (max-width: $bp-small) {
+			font-size: 32px;
+		}
 	}
 	&__subtitle {
 		font-size: 36px;
@@ -192,6 +202,9 @@ textarea {
 		font-weight: 700;
 		margin: 0;
 		line-height: 1;
+		@media (max-width: $bp-small) {
+			font-size: 16px;
+		}
 	}
 
 }
@@ -204,6 +217,9 @@ textarea {
 	padding: 70px 0 80px;
 	&__cont {
 		padding: 0 165px 0 125px;
+		@media (max-width: $bp-medium) {
+			padding: 0;
+		}
 
 	}
 	&__title {
@@ -230,8 +246,19 @@ textarea {
 	}
 	&__text {
 		width: 50%;
-		padding: 80px 0 80px;
+		padding: 80px 0;
 		text-align: right;
+		@media (max-width: $bp-xlarge) {
+			padding: 30px 0;
+		}
+		@media (max-width: $bp-large) {
+			font-size: 16px;
+			width: 57%;
+		}
+		@media (max-width: $bp-small) {
+			font-size: 12px;
+			padding: 10px 0;
+		}
 		ul {
 			margin: 0;
 
@@ -275,6 +302,9 @@ textarea {
 	background: #FFF;
 	&__cont {
 		padding: 0 165px 0 125px;
+		@media (max-width: $bp-medium) {
+			padding: 0;
+		}
 	}
 	&__title {
 		letter-spacing: 0.1em;
@@ -285,28 +315,37 @@ textarea {
 }
 .ba-work {
 	width: 47%;
+	margin-bottom: 30px;
+	@media (max-width: $bp-large) {
+		width: 100%;
+	}
 	&__link {
 		display: block;
 		position: relative;
+		overflow: hidden;
 		&:hover .ba-work__overlay {
-			opacity: 0;
-			transition: opacity 1s;
+			transform: translateY(0);
+			transition: transform .7s;
 		}
 	}
 	&__overlay {
 		position: absolute;
-		top: 0;
+		top: 20%;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		margin: auto;
-		background-color: $brand-color;
-		opacity: 0.7;
-		transition: opacity 1s;
+		background-color: rgba(255, 119, 146, 0.7);
+		transform: translateY(100%);
+		transition: transform .7s;
 	}
 	&__title {
-		margin: 5px 0 30px;
-		color: $secondary-color;
+		color: $text-color;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0;
 	}
 }
 
@@ -336,6 +375,9 @@ textarea {
 	background-size: cover;
 	&__cont {
 		padding-left: 125px;
+		@media (max-width: $bp-medium) {
+			padding: 0;
+		}
 	}
 	&__title {
 		letter-spacing: 0.1em;
@@ -363,6 +405,9 @@ textarea {
 		display: block;
 		margin-bottom: 20px;
 		transition: all 0.5s ease-out;
+		@media (max-width: $bp-medium) {
+			font-size: 16px;
+		}
 		&:hover {
 			transform: scale(1.2);
 		}
@@ -372,7 +417,7 @@ textarea {
 //footer
 
 .ba-footer {
-	padding: 50px 0 75px;
+	padding: 50px 0 50px;
 	background: $brand-color;
 	text-align: center;
 }
