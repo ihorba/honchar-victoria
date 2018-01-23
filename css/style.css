@@ -938,8 +938,8 @@ select {
     width: auto;
     height: auto;
     z-index: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
+    -o-object-fit: contain;
+    object-fit: contain;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
@@ -1139,7 +1139,7 @@ select {
       outline: none; }
 
 .ba-contact {
-  padding: 70px 0 220px;
+  padding: 70px 0 280px;
   background: #e2dcdc url(../img/contact.jpg) 50% no-repeat;
   background-size: cover; }
   .ba-contact__cont {
@@ -1150,19 +1150,88 @@ select {
   .ba-contact__title {
     letter-spacing: 0.1em;
     font-size: 30px;
-    margin: 0 0 140px;
+    margin: 0 0 170px;
     color: #4f4e4f; }
-  .ba-contact__card {
-    max-width: 550px;
+  .ba-contact__card-container {
+    position: relative;
     margin: 0 auto;
-    background: #cc8593;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    width: 400px;
+    height: 220px; }
+    @media (max-width: 480px) {
+      .ba-contact__card-container {
+        width: 100%; } }
+    .ba-contact__card-container:hover .ba-contact__card-front {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg); }
+    .ba-contact__card-container:hover .ba-contact__card {
+      -webkit-transform: rotateY(0);
+      transform: rotateY(0); }
+  .ba-contact__card-front {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #cc8593;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    -o-transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
     text-align: center;
-    padding: 40px 0 20px; }
+    padding-top: 40px; }
+    .ba-contact__card-front a {
+      text-decoration: none;
+      color: #FFF;
+      display: block;
+      margin-top: 40px; }
+  .ba-contact__card-front-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.18em;
+    margin: 0 0 -10px;
+    line-height: 1; }
+  .ba-contact__card-front-subtitle {
+    letter-spacing: 1em;
+    display: inline-block;
+    font-weight: 700;
+    padding: 0 0 10px 15px;
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+    border-bottom: 2px solid #000; }
+  .ba-contact__card {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #fff;
+    text-align: center;
+    padding: 40px 0 20px;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    -o-transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg); }
     .ba-contact__card svg {
       fill: #4f4e4f; }
   .ba-contact__write-me {
     margin: 0 0 30px;
-    color: #FFF; }
+    color: #cc8593; }
   .ba-contact__mail {
     text-decoration: none;
     color: #000;
@@ -1175,12 +1244,12 @@ select {
       .ba-contact__mail {
         font-size: 16px; } }
     .ba-contact__mail:hover {
-      -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-      transform: scale(1.2); }
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
 
 .ba-footer {
-  padding: 50px 0 50px;
+  padding: 80px 0;
   background: #cc8593;
   text-align: center; }
 
@@ -1213,12 +1282,19 @@ select {
     letter-spacing: 0.18em;
     margin: 0;
     line-height: 1; }
+    @media (max-width: 768px) {
+      .ba-inner-header__title {
+        font-size: 32px; } }
   .ba-inner-header__subtitle {
     font-size: 32px;
     letter-spacing: 1em;
     font-weight: 700;
+    padding-left: 20px;
     margin: 0;
     line-height: 1; }
+    @media (max-width: 768px) {
+      .ba-inner-header__subtitle {
+        font-size: 18px; } }
 
 .ba-inner-section {
   padding: 65px 0 40px;
@@ -1250,5 +1326,9 @@ select {
     .ba-inner-slider__buttons button:hover {
       color: #4f4e4f;
       outline: none; }
+
+.mirrowed {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
 
 /*# sourceMappingURL=style.css.map */

@@ -164,7 +164,7 @@ textarea {
 		width: auto;
 		height: auto;
 		z-index: 0;
-		object-fit: cover;
+		object-fit: contain;
 		transform: translate(-50%, -50%);
 	}
 	&__body {
@@ -370,7 +370,7 @@ textarea {
 // contact
 
 .ba-contact {
-	padding: 70px 0 220px;
+	padding: 70px 0 280px;
 	background: #e2dcdc url(../img/contact.jpg) 50% no-repeat;
 	background-size: cover;
 	&__cont {
@@ -382,22 +382,88 @@ textarea {
 	&__title {
 		letter-spacing: 0.1em;
 		font-size: 30px;
-		margin: 0 0 140px;
+		margin: 0 0 170px;
 		color: $secondary-color;
 	}
-	&__card {
-		max-width: 550px;
+	&__card-container {
+		position: relative;
 		margin: 0 auto;
-		background: $brand-color;
+		perspective: 800px;
+		width: 400px;
+		height: 220px;
+		@media (max-width: $bp-small) {
+			width: 100%;
+		}
+		&:hover{
+			.ba-contact__card-front{
+				transform: rotateY(180deg);
+			}
+			.ba-contact__card{
+				transform: rotateY(0);
+			}
+		}
+	}
+
+	&__card-front {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: 1;
+		backface-visibility: hidden;
+		background-color: $brand-color;
+		transition: transform 1.2s ease-in-out;
+		transform: rotateY(0deg);
+		text-align: center;
+		padding-top: 40px;
+		a {
+			text-decoration: none;
+			color: #FFF;
+			display: block;
+			margin-top: 40px;
+		}
+	}
+	&__card-front-title {
+		font-size: 32px;
+		font-weight: 500;
+		color: #fff;
+		letter-spacing: 0.18em;
+		margin: 0 0 -10px;
+		line-height: 1;
+	}
+	&__card-front-subtitle {
+		letter-spacing: 1em;
+		display: inline-block;
+		font-weight: 700;
+		padding: 0 0 10px 15px;
+		margin: 0;
+		line-height: 1;
+		font-size: 16px;
+		border-bottom: 2px solid $text-color;
+	}
+
+	&__card {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: 1;
+		backface-visibility: hidden;
+		background: #fff;
 		text-align: center;
 		padding: 40px 0 20px;
+		transition: transform 1.2s ease-in-out;
+		transform: rotateY(-180deg);
 		svg {
 			fill: $secondary-color;
 		}
 	}
+
 	&__write-me {
 		margin: 0 0 30px;
-		color: #FFF;
+		color: $brand-color;
 	}
 	&__mail {
 		text-decoration: none;
@@ -409,7 +475,7 @@ textarea {
 			font-size: 16px;
 		}
 		&:hover {
-			transform: scale(1.2);
+			transform: scale(1.1);
 		}
 	}
 }
@@ -417,7 +483,7 @@ textarea {
 //footer
 
 .ba-footer {
-	padding: 50px 0 50px;
+	padding: 80px 0;
 	background: $brand-color;
 	text-align: center;
 }
@@ -461,13 +527,20 @@ textarea {
 		letter-spacing: 0.18em;
 		margin: 0;
 		line-height: 1;
+		@media (max-width: $bp-medium) {
+			font-size: 32px;
+		}
 	}
 	&__subtitle {
 		font-size: 32px;
 		letter-spacing: 1em;
 		font-weight: 700;
+		padding-left: 20px;
 		margin: 0;
 		line-height: 1;
+		@media (max-width: $bp-medium) {
+			font-size: 18px;
+		}
 	}
 }
 
@@ -511,3 +584,6 @@ textarea {
 	}
 }
 
+.mirrowed {
+	transform: rotateY(180deg);
+}
