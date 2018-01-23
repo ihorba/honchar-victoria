@@ -30,9 +30,9 @@
 		});
 	});
 
-	$('.ba-menu__item').on('click', function(e){
+	$('.ba-header__link').on('click', function(e){
 
-		$('.ba-menu__item').removeClass('active');
+		$('.ba-header__link').removeClass('active');
 		$(this).addClass('active');
 
 	});
