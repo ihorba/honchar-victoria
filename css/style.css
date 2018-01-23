@@ -925,6 +925,79 @@ select {
     transition: opacity .5s;
     font-weight: 700; }
 
+.ba-menu-toggle {
+  position: fixed;
+  border-radius: 10px;
+  padding: 8px 8px 0;
+  z-index: 10;
+  right: 20px;
+  top: 20px;
+  background: #cc8593;
+  border: none;
+  display: none; }
+  .ba-menu-toggle svg {
+    fill: currentColor; }
+  .ba-menu-toggle:hover, .ba-menu-toggle:focus, .ba-menu-toggle:active {
+    color: #fff;
+    outline-style: none; }
+
+.ba-overlay {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-out, visibility .3s ease-out;
+  -o-transition: opacity .3s ease-out, visibility .3s ease-out;
+  transition: opacity .3s ease-out, visibility .3s ease-out; }
+
+.ba-wrap {
+  -webkit-transition: left .3s ease-out;
+  -o-transition: left .3s ease-out;
+  transition: left .3s ease-out;
+  position: relative;
+  left: 0; }
+
+@media (max-width: 768px) {
+  .ba-header__menu {
+    z-index: 10;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    padding-top: 30px;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    -o-transition: transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
+    .ba-header__menu.ba-menu-open {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); }
+  .ba-menu-toggle {
+    display: inline-block; }
+  .ba-menu-open .ba-wrap {
+    left: -250px; }
+  .ba-menu-open .ba-overlay {
+    right: 250px;
+    visibility: visible;
+    opacity: 1; }
+  .ba-menu-open .ba-header__menu {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    top: 0; }
+  .ba-menu-open .ba-header__item-name {
+    opacity: 1; } }
+
 .ba-intro {
   background: #edeaf5;
   position: relative;
@@ -977,6 +1050,9 @@ select {
   background: #cc8593 url(../img/purpl-bg.jpg) 50% no-repeat;
   background-size: cover;
   padding: 70px 0 80px; }
+  @media (max-width: 768px) {
+    .ba-about {
+      padding: 30px 0; } }
   .ba-about__cont {
     padding: 0 165px 0 125px; }
     @media (max-width: 768px) {
@@ -1060,6 +1136,9 @@ select {
 .ba-portfolio {
   padding: 70px 0 40px;
   background: #FFF; }
+  @media (max-width: 768px) {
+    .ba-portfolio {
+      padding: 30px 0; } }
   .ba-portfolio__cont {
     padding: 0 165px 0 125px; }
     @media (max-width: 768px) {
@@ -1077,6 +1156,9 @@ select {
   @media (max-width: 960px) {
     .ba-work {
       width: 100%; } }
+  .ba-work img {
+    display: block;
+    width: 100%; }
   .ba-work__link {
     display: block;
     position: relative;
@@ -1133,6 +1215,9 @@ select {
   padding: 70px 0 280px;
   background: #e2dcdc url(../img/contact.jpg) 50% no-repeat;
   background-size: cover; }
+  @media (max-width: 768px) {
+    .ba-contact {
+      padding: 30px 0 100px; } }
   .ba-contact__cont {
     padding-left: 125px; }
     @media (max-width: 768px) {
