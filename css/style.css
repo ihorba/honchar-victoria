@@ -873,7 +873,7 @@ select {
   .ba-header__link {
     text-decoration: none;
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -927,18 +927,16 @@ select {
 
 .ba-menu-toggle {
   position: fixed;
-  border-radius: 10px;
-  padding: 8px 8px 0;
   z-index: 10;
   right: 20px;
   top: 20px;
-  background: #cc8593;
+  background: none;
   border: none;
   display: none; }
   .ba-menu-toggle svg {
     fill: currentColor; }
   .ba-menu-toggle:hover, .ba-menu-toggle:focus, .ba-menu-toggle:active {
-    color: #fff;
+    color: #cc8593;
     outline-style: none; }
 
 .ba-overlay {
@@ -968,7 +966,7 @@ select {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 250px;
+    width: 180px;
     padding-top: 30px;
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
@@ -985,9 +983,9 @@ select {
   .ba-menu-toggle {
     display: inline-block; }
   .ba-menu-open .ba-wrap {
-    left: -250px; }
+    left: -180px; }
   .ba-menu-open .ba-overlay {
-    right: 250px;
+    right: 180px;
     visibility: visible;
     opacity: 1; }
   .ba-menu-open .ba-header__menu {
@@ -1212,7 +1210,7 @@ select {
       outline: none; }
 
 .ba-contact {
-  padding: 70px 0 280px;
+  padding: 70px 0 330px;
   background: #e2dcdc url(../img/contact.jpg) 50% no-repeat;
   background-size: cover; }
   @media (max-width: 768px) {
@@ -1325,7 +1323,7 @@ select {
       transform: scale(1.1); }
 
 .ba-footer {
-  padding: 80px 0;
+  padding: 50px 0;
   background: #cc8593;
   text-align: center; }
 

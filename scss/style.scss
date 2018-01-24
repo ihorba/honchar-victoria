@@ -109,7 +109,7 @@ textarea {
 	&__link {
 		text-decoration: none;
 		color: $text-color;
-		font-size: 16px;
+		font-size: 14px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
@@ -153,19 +153,17 @@ textarea {
 
 .ba-menu-toggle {
 	position: fixed;
-	border-radius: 10px;
-	padding: 8px 8px 0;
 	z-index: 10;
 	right: 20px;
 	top: 20px;
-	background: $brand-color;
+	background: none;
 	border: none;
 	display: none;
 	svg {
 		fill: currentColor;
 	}
 	&:hover, &:focus, &:active {
-		color: #fff;
+		color: $brand-color;
 		outline-style: none;
 	}
 }
@@ -195,7 +193,7 @@ textarea {
 		right: 0;
 		top: 0;
 		bottom: 0;
-		width: 250px;
+		width: 180px;
 		padding-top: 30px;
 		transform: translateX(100%);
 		transition: transform .3s ease-out;
@@ -210,11 +208,11 @@ textarea {
 
 	.ba-menu-open {
 		.ba-wrap {
-			left: -250px;
+			left: -180px;
 		}
 
 		.ba-overlay {
-			right: 250px;
+			right: 180px;
 			visibility: visible;
 			opacity: 1;
 		}
@@ -455,7 +453,7 @@ textarea {
 // contact
 
 .ba-contact {
-	padding: 70px 0 280px;
+	padding: 70px 0 330px;
 	background: #e2dcdc url(../img/contact.jpg) 50% no-repeat;
 	background-size: cover;
 	@media (max-width: $bp-medium) {
@@ -571,7 +569,7 @@ textarea {
 //footer
 
 .ba-footer {
-	padding: 80px 0;
+	padding: 50px 0;
 	background: $brand-color;
 	text-align: center;
 }
